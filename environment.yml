@@ -1,0 +1,36 @@
+name: kaggle_PS
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # 1. Core Python and Data Science Stack
+  - python=3.10          # Modern, stable Python version
+  - numpy
+  - pandas
+  - scikit-learn
+  - scipy
+  - statsmodels
+  - xgboost
+  - lightgbm
+  - catboost
+  - optuna               # For hyperparameter optimization
+  - openpyxl             # For reading/writing Excel files
+
+  # 2. Visualization and Data Exploration
+  - matplotlib
+  - seaborn              
+
+  # 3. Notebook and Development Tools (Essential for Jupyter/VS Code)
+  - jupyterlab           # Powerful IDE for notebooks (you can use 'jupyter' instead for just the classic notebook)
+  - ipykernel            # Essential for Jupyter/VS Code to find and use this environment
+  - ipython              # Powerful interactive Python shell
+  - ipywidgets           # Interactive widgets for Jupyter notebooks
+  - joblib               # For fast saving/loading of models
+  - tqdm                 # For nice progress bars
+
+  # 4. Deep Learning (Core Keras/TensorFlow)
+  - pip                  # Essential for the pip section below
+  - pip:
+    - tensorflow         # The main deep learning framework
+    - keras              # Keras is now part of the TensorFlow dependency structure but good to specify
+    - kaggle             # Kaggle API for downloading datasets and submitting to competitions
